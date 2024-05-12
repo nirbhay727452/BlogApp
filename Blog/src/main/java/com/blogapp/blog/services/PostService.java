@@ -1,12 +1,13 @@
 package com.blogapp.blog.services;
 
 import com.blogapp.blog.DTOs.PostDTO;
+import com.blogapp.blog.DTOs.PostResponse;
 
 import java.util.List;
 
 public interface PostService {
     PostDTO createPost(PostDTO postDTO);
-    List<PostDTO> getAllPost();
+    PostResponse getAllPost(int pageNo, int pageSize);
     PostDTO getPostById(Long id);
 
     PostDTO updatePostById(PostDTO postDTO, Long id);
